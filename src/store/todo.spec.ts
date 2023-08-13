@@ -3,11 +3,9 @@ import { useTodoStore } from "."
 import { createPinia, setActivePinia } from "pinia"
 
 describe("测试todoList", () => {
-  beforeEach(() => {
-    setActivePinia(createPinia())
-  })
   test("add todo", () => {
     // 准备数据
+    setActivePinia(createPinia())
     const todoStore = useTodoStore()
     const title = "吃饭"
     // 调用
